@@ -1,5 +1,6 @@
 package cn.it.download;
 
+import cn.it.download1.DownloadNotificationObserver;
 import cn.it.download1.DownloadTaskManager;
 import android.app.Activity;
 import android.app.DownloadManager;
@@ -57,7 +58,7 @@ public class NotificationActivity extends Activity {
         bean1.downloadSize = 254;
         bean1.downloadState = 2;
         bean1.name = "Ã⁄—∂ø·≈‹";
-        //DownloadNotificationObserver.getInstance(NotificationActivity.this).onDownloadStateChanged(bean1);
+        DownloadNotificationObserver.getInstance(NotificationActivity.this).onDownloadStateChanged(bean1);
     }
     public void createNotification2(View v){
         bean2 = new DownloadBean();
